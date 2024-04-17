@@ -1,0 +1,74 @@
+section {
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    text-align: center;
+    border-radius: 20px;
+    border: solid 3px black;
+    background-color: rgb(70, 70, 236);
+    padding: 1%;
+    width: fit-content;
+}
+
+#cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#juego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tablero {
+    margin: 1%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.celdas {
+    font-size: 1em;
+}
+#txtTurno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#trn {
+    font-size: 3em;
+    margin: 0;
+    background-color: white;
+    width: fit-content;
+    text-align: center;
+    border-radius: 15px;
+    color: rgb(104, 226, 56);
+    background-color: black;
+}
+
+
+#tablero div {
+    align-items: center;
+    background-color: rgb(218, 255, 255);
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton { 
+    background-color: rgb(103, 199, 64);
+    width: 80px;
+    height: 40px;
+}
+
+#cajaInput {
+    margin: 1%;
+    background-color: rgb(128, 70, 236);
+
+}
