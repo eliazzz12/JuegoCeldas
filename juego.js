@@ -1,15 +1,24 @@
 const boton = document.getElementsByClassName('botones');
 const numTurno = document.getElementById('trn');
 
-
 var turno;
 var tablero;
-
 
 function iniciarPartida(){
     tablero = [100,100,100,100,100,100];
     mostrarTablero();
     quienEmpieza();
+}
+
+function mostrarTablero(){
+    for(i=0;i<6;i++){
+        document.getElementById('celda'+(i+1)).innerHTML = tablero[i];
+    }
+}
+
+function quienEmpieza(){
+    turno = parseInt((Math.random()*2)+1);
+    document.getElementById('trn').innerHTML = turno;
 }
 
 function restar(celda){
@@ -35,13 +44,6 @@ function cambiarTurno(){
     document.getElementById('trn').innerHTML = turno;
 }
 
-
-
-function quienEmpieza(){
-    turno = parseInt((Math.random()*2)+1);
-    document.getElementById('trn').innerHTML = turno;
-}
-
 function comprobarVictoria(){
     let cont = 6;
     for(i=0,j=tablero.length;i<j;i++){
@@ -50,10 +52,4 @@ function comprobarVictoria(){
         }
     }
     return (cont==0 ? true : false);
-}
-
-function mostrarTablero(){
-    for(i=0;i<6;i++){
-        document.getElementById('celda'+(i+1)).innerHTML = tablero[i];
-    }
 }
